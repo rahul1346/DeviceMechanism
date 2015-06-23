@@ -1,0 +1,12 @@
+List of routes:
+
+	* User
+		* [POST]/user/create - Creates user in db 
+		* [GET]/user/share/:userId/:deviceId - Shares logged in user's device with :userId. If :userId is not present responds USER_NOT_FOUND; if :deviceId not present in db responds DEVICE_NOT_FOUND
+		* [GET]/users/add_device/:userId/:deviceId - Adds device(:deviceId) under user(:userId) object
+		* [GET]/users/:userId/devices/ - List all the devices of the user(:userId)
+		
+	* Device
+		* [POST]/device/create - Creates device in db
+		* [GET]/devices/add_user/:deviceId/:userId - Adds user(:userId) under device(:device) Object in db.
+		* [GET]/devices/:deviceId/users/ - Lists all users who has access to devices(:deviceId)
